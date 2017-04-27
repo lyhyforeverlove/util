@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="xmlMarshaller" class="com.eeduspace.uuims.comm.util.xml.XmlMarshaller">
+        <property name="unmarshaller" ref="jaxb2Marshaller"/>
+        <property name="marshaller" ref="jaxb2Marshaller"/>
+    </bean>
+
+    <bean id="gson" class="com.google.gson.Gson"/>
+
+    <bean id="jaxb2Marshaller"
+          class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="packagesToScan">
+            <list>
+                <value>com.eeduspace.uuims.*</value>
+            </list>
+        </property>
+    </bean>
+</beans>
