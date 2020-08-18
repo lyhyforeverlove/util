@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="xmlMarshaller" class="com.eeduspace.uuims.comm.util.xml.XmlMarshaller">
+    <bean id="xmlMarshaller" class="com.toolkit.comm.util.xml.XmlMarshaller">
         <property name="unmarshaller" ref="jaxb2Marshaller"/>
         <property name="marshaller" ref="jaxb2Marshaller"/>
     </bean>
